@@ -1,0 +1,24 @@
+#! /bin/bash
+
+echo "--------------------    Welcome to Database Management System , Please choose one of these options    -----------------------"
+
+select option in "Create Database" "Drop Database" "List Database" "Connect to Database"
+do
+    case $REPLY in 
+        1) ./create_db.sh
+           break
+           ;;
+        2) ./dropDatabase
+           break
+           ;;
+        3) ./list_db.sh
+           break
+           ;;
+        4) ./connectToDatabase
+           break
+           ;;
+        *) echo "Sorry Invalid option , Please Choose a valid option."
+           ;;
+    esac
+done
+
